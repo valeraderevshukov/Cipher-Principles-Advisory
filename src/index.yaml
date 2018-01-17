@@ -3,3 +3,5 @@ ProjectTitle: cipher-principles-advisory
 PageList:
 - file: page.html
   ready: 50
+- file: privacy.html
+  ready: 100

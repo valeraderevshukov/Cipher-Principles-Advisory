@@ -1,0 +1,79 @@
+.footer
+	color: $white
+	background: $blue
+	&__inner
+		position: relative
+		padding: 90px 20px 20px
+		margin: 0 auto
+		max-width: 880px
+		+clr
+		+sm 
+			padding-top: 45px 
+	&__top
+		padding-bottom: 40px
+		min-height: 451px
+		+sm 
+			padding-bottom: 90px
+			min-height: auto
+	&__title
+		margin-bottom: 56px
+		+sm 
+			margin-bottom: 37px
+	&__description
+		padding-right: 24px
+		opacity: 0.8
+		+f(12px, null, 1.5)
+		+sm 
+			padding: 0
+			+f(9px, null, 13px)
+	&__container
+		padding: 20px 40px
+		border-top: 1px solid rgba($white, 0.2)
+		font-size: 0
+		+clr 
+		+md 
+			padding: 20px
+		+sm 
+			padding: 15px 20px
+	&__link,
+	&__address,
+	&__copy
+		display: inline-block
+		vertical-align: top
+		&:not(:last-child)
+			margin-right: 16px
+			+sm 
+				margin-right: 0
+	&__link,
+	&__address
+		color: $white
+		+f(12px, 400, 14px)
+		+sm
+			+f(9px, null, 2)
+	&__copy 
+		+f(14px, 700, 14px)
+		+sm
+			padding: 1px 0
+			font-size: 12px
+	&__address,
+	&__mail 
+		+sm
+			display: none
+	&__link 
+		+sm 
+			opacity: 0.8
+			transition: opacity 0.25s
+			+hover 
+				opacity: 1
+	&__info,
+	&__nav
+		+sm
+			width: 50%
+	&__info
+		float: left
+	&__nav 
+		float: right
+		text-align: right
+		a 
+			+sm 
+				display: block
