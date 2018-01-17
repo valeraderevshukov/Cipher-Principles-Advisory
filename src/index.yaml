@@ -5,3 +5,5 @@ PageList:
   ready: 50
 - file: privacy.html
   ready: 100
+- file: contact.html
+  ready: 100
