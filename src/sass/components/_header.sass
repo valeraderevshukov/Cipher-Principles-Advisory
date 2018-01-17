@@ -1,0 +1,46 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding-top: 40px
+	color: $white 
+.logo
+	float: left
+.nav
+	float: left
+	margin-left: 167px
+	font-size: 16px
+	font-weight: 700
+	&__item
+		vertical-align: top
+		display: inline-block
+		&:not(:first-child)
+			margin-left: 24px
+	&__link
+		opacity: .6
+		color: $white 
+		transition: opacity .3s ease-in-out
+		+hover
+			opacity: 1
+.lang
+	position: relative
+	float: right
+	padding-right: 42px
+	min-width: 42px
+	&:before
+		position: absolute
+		content: ""
+		top: 50% 
+		right: 0
+		+arr(7,4,$white,b)
+	// &__current
+	&__list
+		position: absolute
+		top: 100%
+		width: 42px
+		left: 0
+		display: none
+	&__item
+		display: block
+		// a
