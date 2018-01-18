@@ -23,7 +23,7 @@ export const {
   widthLG,
   slickXS,
   slickSM,
-  slickMD,
+  slickMD
 } = {
   DOC: $(document),
   WIN: $(window),

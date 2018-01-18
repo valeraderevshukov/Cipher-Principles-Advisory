@@ -5,7 +5,8 @@ export const {
   TOUCH,
   SCROLL_TO,
   INIT_SLIDER,
-  IS_FUNC
+  IS_FUNC,
+  GET_WINDOW_WIDTH
 } = {
   GET_RANDOM(min, max) {
     return Math.random() * (max - min) + min;
@@ -27,5 +28,8 @@ export const {
   },
   IS_FUNC(func) {
     return (typeof func != 'function') ? false : true;
+  },
+  GET_WINDOW_WIDTH(width) {
+    return window.matchMedia(`(max-width: ${width}px)`).matches;
   }
 };
