@@ -6,6 +6,8 @@
 	padding-top: 40px
 	color: $white 
 	z-index: 100
+	&__inner
+		max-width: 1680px
 .logo
 	float: left
 .nav
@@ -17,7 +19,7 @@
 		vertical-align: top
 		display: inline-block
 		&:not(:first-child)
-			margin-left: 24px
+			margin-left: 63px
 	&__link
 		opacity: .6
 		color: $white 
@@ -31,6 +33,8 @@
 	min-width: 12px
 	font-size: 16px
 	font-weight: 700
+	cursor: pointer
+	user-select: none
 	&:before
 		position: absolute
 		content: ""
