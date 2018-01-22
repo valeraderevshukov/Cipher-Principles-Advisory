@@ -23,6 +23,4 @@ window.initMap = () => {
     }
   });
 
-  console.log(marker);
-
 };
