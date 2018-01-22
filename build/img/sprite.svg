@@ -15,6 +15,14 @@
         <path d="M0 0v23.5h6.1l6.7 6.7 6.7-6.7H23v-3h-4.7L12.9 26l-5.5-5.5H3V3h29v8h3V0H0z"/>
     </g>
     <path d="M42.1 38.2l-6.7-6.7H20V8h35v23.5h-6.1l-6.8 6.7zM23 28.5h13.7l5.5 5.5 5.5-5.5H52V11H23v17.5z"/>
+</symbol><symbol id="icon-close" viewBox="0 0 21.29 21.26">
+    <title>
+        close
+    </title>
+    <g opacity=".5">
+        <path d="M-.006 1.41L1.41-.006 21.25 19.837l-1.414 1.414z"/>
+        <path d="M.026 19.85L19.867.007l1.414 1.414L1.44 21.264z"/>
+    </g>
 </symbol><symbol id="icon-diamond" viewBox="0 0 45 37">
     <title>
         diamond

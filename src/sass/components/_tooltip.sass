@@ -1,0 +1,27 @@
+.tooltip
+	position: relative
+	padding: 8px 80px 8px 20px
+	color: rgba($white, 0.5)
+	+f(16px,400,1.5) 
+	letter-spacing: 0 
+	width: 641px
+	border-radius: 4px
+	background-color: rgba($black, 0.5)
+	display: inline-block
+	a
+		color: inherit
+		border-bottom: 1px solid
+		transition: border-color .3s
+		+hover
+			border-color: transparent 
+	&__close
+		position: absolute
+		top: 50%
+		right: 31px
+		color: rgba($white, 0.5)
+		margin-top: -9px
+		font-size: 19px 
+		transition: color .3s
+		background-color: transparent 
+		+hover
+			color: $white 
