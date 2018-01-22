@@ -13,7 +13,7 @@
   </head>
   <body  id="barba-wrapper">
     <!-- BEGIN content -->
-    <div class="out barba-container">
+    <div class="out barba-container" {% if nameSpace %}data-namespace="{{ nameSpace }}"{% endif %}>
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
