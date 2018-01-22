@@ -1,12 +1,15 @@
 .sticky-nav 
-	position: absolute
+	position: absolute !important
 	top: 0
 	left: 0
-	padding: 36px 39px 43px 
 	width: 305px
-	background: $lightGray
 	+md 
 		display: none
+	&__inner 
+		position: relative
+	&__container
+		padding: 36px 39px 43px 
+		background: $lightGray
 	&__label
 		margin-bottom: 22px
 	&__link
@@ -24,4 +27,8 @@
 		right: 0
 		border-right: 5px solid $violet
 		height: 26px
+		opacity: 0
 		+gpu
+		transition: opacity 0.25s, transform 0.25s
+		&[data-state="true"]
+			opacity: 1
