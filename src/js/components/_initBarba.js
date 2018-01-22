@@ -1,4 +1,5 @@
 import { TweenLite } from 'gsap';
+import Barba from 'barba.js';
 import { DOC } from './../_constants';
 
 DOC.ready(() => {
