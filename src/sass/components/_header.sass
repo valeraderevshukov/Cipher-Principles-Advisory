@@ -5,6 +5,9 @@
 	right: 0
 	padding-top: 40px
 	color: $white 
+	z-index: 100
+	&__inner
+		max-width: 1680px
 .logo
 	float: left
 .nav
@@ -16,7 +19,10 @@
 		vertical-align: top
 		display: inline-block
 		&:not(:first-child)
-			margin-left: 24px
+			margin-left: 63px
+		&.is-active
+			.nav__link
+				opacity: 1
 	&__link
 		opacity: .6
 		color: $white 
@@ -26,13 +32,18 @@
 .lang
 	position: relative
 	float: right
-	padding-right: 42px
-	min-width: 42px
+	padding-right: 12px
+	min-width: 12px
+	font-size: 16px
+	font-weight: 700
+	cursor: pointer
+	user-select: none
 	&:before
 		position: absolute
 		content: ""
 		top: 50% 
 		right: 0
+		margin-top: -2px
 		+arr(7,4,$white,b)
 	// &__current
 	&__list
