@@ -1,0 +1,37 @@
+.client
+	padding-top: 254px
+	+lg
+		padding-top: 130px
+	+sm 
+		padding-top: 86px
+	&__title
+		margin-bottom: 78px
+		+sm 
+			padding: 0 20px
+			margin-bottom: 34px
+	&__container
+		position: relative
+		display: block
+		height: 778px
+		+vertical
+		+lg 
+			height: 500px
+		+sm 
+			height: 324px
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: linear-gradient(151deg, #0A2F2A 8%, #2D5442 100%)
+	&__logo
+		position: relative
+		z-index: 1
+		display: inline-block
+		vertical-align: middle
+		.icon 
+			fill: $white
+			font-size: 203px
+			+sm 
+				font-size: 96px

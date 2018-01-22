@@ -1,0 +1,33 @@
+<!-- begin service -->
+<div class="service">
+	<div class="service__inner">
+		<h2 class="title-lg title-lg_simple service__title">Advisory Service</h2>
+		<div class="service__container">
+			<div class="service__row">
+				{% for item in [
+					{
+						icon: 'diamond',
+						title: 'Expertise',
+						description: 'Our advisory services are designed primarily for cryptocurrency funds, as a custody and execution venue.  But in addition, we service high networth individuals, family offices, and institutional investors who have the resources, but not necessarily the time or background to invest successfully in cryptocurrencies.'
+					},
+					{
+						icon: 'chat',
+						title: 'Understanding',
+						description: 'We will take time to understand your priorities, goals, and targets before recommending an optimum portfolio structure.  We understand that changes in the market or your own financial situation will affect your appetite for risk, and will constantly re-evaluate your portfolio, offering customised solutions that suit your changing needs.'
+					}
+				] %}
+					<div class="service__col">
+						<div class="service__icon">
+							{{mixins.icon(item.icon)}}
+						</div>
+						<h3 class="title-md service__subtitle">{{item.title}}</h3>
+						<div class="service__description">
+							<p>{{item.description}}</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end service -->

@@ -1,0 +1,34 @@
+<!-- begin sticky-nav -->
+<div class="sticky-nav">
+	<div class="label sticky-nav__label">About our advisory</div>
+	<div class="sticky-nav__line"></div>
+	<ul class="sticky-nav__list">
+		{% for item in [
+			{
+				target: 'trust',
+				title: 'Trust'
+			},
+			{
+				target: 'experience',
+				title: 'Experience'
+			},
+			{
+				target: 'approach',
+				title: 'Approach'
+			},
+			{
+				target: 'services',
+				title: 'Services'
+			},
+			{
+				target: 'client',
+				title: 'Client'
+			}
+		] %}
+			<li class="sticky-nav__item">
+				<a data-href="{{item.target}}" class="sticky-nav__link">{{item.title}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- end sticky-nav -->

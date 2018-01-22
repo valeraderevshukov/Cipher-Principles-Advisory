@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="37px" viewBox="0 0 45 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>diamond</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-469.000000, -4006.000000)">
+        <g id="diamond" transform="translate(469.000000, 4006.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M39.16935,0 L22.5,0 L5.83065,0 L0,10.60065 L22.5,36.5247 L45,10.60065 L39.16935,0 Z M37.63575,2.85525 L41.05125,9.0657 L34.91325,9.0657 L37.63575,2.85525 Z M34.7256,2.71935 L32.23395,8.40555 L26.0064,2.71935 L34.7256,2.71935 Z M28.92285,9.0657 L22.5,9.0657 L16.07715,9.0657 L22.5,3.20085 L28.92285,9.0657 Z M18.9936,2.71935 L12.7665,8.40555 L10.2744,2.71935 L18.9936,2.71935 Z M7.36425,2.85525 L10.08675,9.0657 L3.94875,9.0657 L7.36425,2.85525 Z M4.6296,11.78505 L11.2788,11.78505 L18.0639,27.2646 L4.6296,11.78505 Z M14.24835,11.78505 L22.5,11.78505 L30.7521,11.78505 L22.5,30.6099 L14.24835,11.78505 Z M26.93565,27.26505 L33.72075,11.7855 L40.3704,11.7855 L26.93565,27.26505 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

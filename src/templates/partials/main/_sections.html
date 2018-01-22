@@ -1,0 +1,55 @@
+<!-- begin sections -->
+<div class="sections">
+	{% for item in [
+		{
+			id: 'trust',
+			label: 'Trust',
+			title: 'Trusted advice',
+			icon: 'trust',
+			description: [
+				'The rise to prominence of cryptocurrencies has been accompanied by a corresponding level of fear, uncertainty, and doubt in the market, but we believe there is a sensible and appropriate response to this asset class that we will lead on.',
+				'As one of the first advisory services to come with licensing permission from the UK’s <a href="#">Financial Conduct Authority</a> (FCA), our customers can take comfort in the fact we meet and exceed the highest standards in financial services anywhere in the world.'
+			]
+		},
+		{
+			id: 'experience',
+			label: 'Experience',
+			title: 'We know crypto',
+			icon: 'experience',
+			description: [
+				'Cryptocurrencies aren’t just a new financial product, they are an entirely new technology that will change the way many businesses operate.',
+				'Buzzwords like blockchain and bitcoin are all over the news, but not many financial advisors have the knowledge and experience to capitalise on these truly unique developments. Cipher Principles is built on the collective understanding of some of the biggest minds in crypto.  We leave no stone unturned when evaluating a new cryptocurrency - we analyse the underlying technology, we speak with the team behind it, evaluate their roadmap and conduct community surveys to gather consensus, from there we determine whether the coin has a profitable and sustainable future.'
+			]
+		},
+		{
+			id: 'approach',
+			label: 'Approach',
+			title: 'Scientific approach',
+			icon: 'approach',
+			description: [
+				'More than half of our team come from academic backgrounds in mathematics, cryptography, and technology. We have an unprecedented and unrivaled understanding of what creates and drives value in cryptocurrencies.',
+				'Traditional portfolio construction approaches are inapplicable here. We employ advanced quantitative strategies, continually analysing the market to deliver the strategies and predictions you can build your portfolio on to maximise returns.'
+			]
+		}
+	] %}
+		<div class="section" data-id="{{item.id}}">
+			<div class="section__header">
+				<div class="label section__label">{{item.label}}</div>
+				<h2 class="title-lg title-lg_simple section__title">{{item.title}}</h2>
+			</div>
+			<div class="section__figure">
+				<div class="section__icon section__{{item.icon}}">
+					{% if item.icon %}
+						{% include './_icon-' + item.icon + '.html' %}
+					{% endif %}
+				</div>
+			</div>
+			<div class="section__description">
+				{% for item in item.description %}
+					<p>{{item | safe}}</p>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</div>
+<!-- end sections -->

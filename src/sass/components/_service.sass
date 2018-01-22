@@ -1,0 +1,65 @@
+.service
+	&__title
+		margin-bottom: 78px
+		+md 
+			padding: 0 20px
+		+sm 
+			margin-bottom: 18px
+			max-width: 330px
+	&__container
+		display: table
+		width: 100%
+		color: $white
+		+lg
+			display: block
+		+md 
+			display: table
+		+sm 
+			display: block
+	&__row
+		display: table-row
+		+lg
+			display: block
+		+md 
+			display: table-row
+		+sm 
+			display: block
+	&__col
+		display: table-cell
+		vertical-align: top
+		padding: 96px 50px 101px
+		background: #2D3353
+		+lg
+			display: block
+		+md 
+			display: table-cell
+			padding: 70px 20px 
+		+sm 
+			display: block
+		&:last-child 
+			background-image: linear-gradient(151deg, #2D3353 8%, #3E3E88 100%)
+	&__icon
+		margin-bottom: 30px
+		height: 46px
+		+sm 
+			margin-bottom: 30px
+			height: auto
+		.icon 
+			display: inline-block
+			vertical-align: top
+			fill: $white
+			&-diamond
+				font-size: 37px
+			&-chat
+				font-size: 42px
+	&__subtitle
+		margin-bottom: 27px
+		+sm 
+			margin-bottom: 19px
+	&__description
+		max-width: 380px
+		+f(18px, 400, 28px)
+		+lg
+			max-width: none
+		+sm 
+			+f(13px, null, 18px)
