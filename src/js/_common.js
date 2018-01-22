@@ -1,5 +1,6 @@
 import { TOUCH } from './_utils';
 import { BODY } from './_constants';
+import Barba from 'barba.js';
 
 import svg4everybody from 'svg4everybody';
 
