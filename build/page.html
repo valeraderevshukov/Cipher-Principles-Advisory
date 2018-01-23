@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Home page</title>
+    <title>Index page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,7 +14,7 @@
     <!-- BEGIN content -->
     <div class="out barba-container">
       <!-- begin header -->
-      <header class="header header_main" data-anim-from="top">
+      <header class="header" data-anim-from="top">
         <div class="header__inner inner">
           <!-- begin logo --><a href="./home.html" class="logo">
 			<svg width="209" height="94" viewBox="0 0 209 94" xmlns="http://www.w3.org/2000/svg">
@@ -124,25 +124,21 @@
       <div class="main">
         <div class="main__inner">
           <!-- begin sticky-nav -->
-          <div class="sticky-nav js-sticky-sidebar">
-            <div class="sticky-nav__inner">
-              <div class="sticky-nav__container">
-                <div class="label sticky-nav__label">About our advisory</div>
-                <div class="sticky-nav__line" data-line></div>
-                <ul class="sticky-nav__list">
-                  <li class="sticky-nav__item"> <a data-href="trust" class="sticky-nav__link">Trust</a> </li>
-                  <li class="sticky-nav__item"> <a data-href="experience" class="sticky-nav__link">Experience</a> </li>
-                  <li class="sticky-nav__item"> <a data-href="approach" class="sticky-nav__link">Approach</a> </li>
-                  <li class="sticky-nav__item"> <a data-href="services" class="sticky-nav__link">Services</a> </li>
-                  <li class="sticky-nav__item"> <a data-href="client" class="sticky-nav__link">Client</a> </li>
-                </ul>
-              </div>
-            </div>
+          <div class="sticky-nav">
+            <div class="label sticky-nav__label">About our advisory</div>
+            <div class="sticky-nav__line"></div>
+            <ul class="sticky-nav__list">
+              <li class="sticky-nav__item"> <a data-href="trust" class="sticky-nav__link">Trust</a> </li>
+              <li class="sticky-nav__item"> <a data-href="experience" class="sticky-nav__link">Experience</a> </li>
+              <li class="sticky-nav__item"> <a data-href="approach" class="sticky-nav__link">Approach</a> </li>
+              <li class="sticky-nav__item"> <a data-href="services" class="sticky-nav__link">Services</a> </li>
+              <li class="sticky-nav__item"> <a data-href="client" class="sticky-nav__link">Client</a> </li>
+            </ul>
           </div>
           <!-- end sticky-nav -->
           <!-- begin sections -->
           <div class="sections">
-            <div class="section" data-section="trust">
+            <div class="section" data-id="trust">
               <div class="section__header">
                 <div class="label section__label">Trust</div>
                 <h2 class="title-lg title-lg_simple section__title">Trusted advice</h2>
@@ -168,7 +164,7 @@
                   anywhere in the world.</p>
               </div>
             </div>
-            <div class="section" data-section="experience">
+            <div class="section" data-id="experience">
               <div class="section__header">
                 <div class="label section__label">Experience</div>
                 <h2 class="title-lg title-lg_simple section__title">We know crypto</h2>
@@ -183,7 +179,7 @@
                   gather consensus, from there we determine whether the coin has a profitable and sustainable future.</p>
               </div>
             </div>
-            <div class="section" data-section="approach">
+            <div class="section" data-id="approach">
               <div class="section__header">
                 <div class="label section__label">Approach</div>
                 <h2 class="title-lg title-lg_simple section__title">Scientific approach</h2>
@@ -206,7 +202,7 @@
           </div>
           <!-- end sections -->
           <!-- begin service -->
-          <div class="service" data-section="services">
+          <div class="service">
             <div class="service__inner">
               <h2 class="title-lg title-lg_simple service__title">Advisory Service</h2>
               <div class="service__container">
@@ -233,7 +229,7 @@
           </div>
           <!-- end service -->
           <!-- begin client -->
-          <div class="client" data-section="client">
+          <div class="client">
             <div class="client__inner">
               <h2 class="title-lg title-lg_simple client__title">Client</h2>
               <a href="#" class="client__container">
