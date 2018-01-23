@@ -14,7 +14,7 @@
     <!-- BEGIN content -->
     <div class="out barba-container" data-namespace="contact">
       <!-- begin header -->
-      <header class="header" data-anim-from="top">
+      <header class="header js-header" data-anim-from="top">
         <div class="header__inner inner">
           <!-- begin logo --><a href="./home.html" class="logo">
 			<svg width="209" height="94" viewBox="0 0 209 94" xmlns="http://www.w3.org/2000/svg">
@@ -69,26 +69,41 @@
 			    </g>
 			</svg>
 		</a>
-          <!-- end logo -->
-          <!-- begin nav -->
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="./privacy.html">About</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Client</a></li>
-              <li class="nav__item"><a class="nav__link" href="./contact.html">Contact</a></li>
+          <!-- end logo --><button class="header__btn btn-open-nav js-btn-open-nav">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+          <div class="header__wrap js-menu-mob">
+            <!-- begin nav -->
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="./privacy.html">About</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Client</a></li>
+                <li class="nav__item"><a class="nav__link" href="./contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <!-- end nav -->
+            <!-- begin lang -->
+            <div class="header__lang lang">
+              <div class="lang__current">Eng</div>
+              <ul class="lang__list">
+                <li class="lang__item"><a href="#">Eng</a></li>
+                <li class="lang__item"><a href="#">Ru</a></li>
+              </ul>
+            </div>
+            <!-- end lang -->
+            <!-- begin share -->
+            <ul class="header__share share">
+              <li class="share__item"><a href="#">
+<svg class="icon icon-in"><use xlink:href="img/sprite.svg#icon-in"></use></svg>
+</a></li>
             </ul>
-          </nav>
-          <!-- end nav -->
-          <!-- begin lang -->
-          <div class="lang">
-            <div class="lang__current">Eng</div>
-            <ul class="lang__list">
-              <li class="lang__item"><a href="#">Eng</a></li>
-              <li class="lang__item"><a href="#">Ru</a></li>
-            </ul>
+            <!-- end share -->
+            <!-- begin mail --><a href="mailto:info@cipherprinciples.com" class="header__mail mail">info@cipherprinciples.com</a>
+            <!-- end mail -->
           </div>
-          <!-- end lang -->
         </div>
       </header>
       <!-- end header -->

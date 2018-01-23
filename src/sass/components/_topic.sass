@@ -18,22 +18,13 @@
 		z-index: 2
 		padding: 260px 0 44px 40px
 		font-size: 12px
+		+md
+			display: none
 	&__mail
 		position: absolute
 		left: 73px
 		bottom: 33px
-		color: $white 
-		font-size: 12px
-		font-weight: 400 
-		writing-mode: vertical-lr
 		transform: rotate(180deg)
-		&:before
-			position: absolute
-			content: ""
-			top: -5px
-			left: -5px
-			right: -5px
-			bottom: -5px 
 		+xl
 			left: 40px
 	&__inner
@@ -47,6 +38,8 @@
 		+xl
 			padding-left: 120px
 			text-align: center
+		+md
+			padding: 120px 20px
 	&__wrap
 		position: relative
 		width: 100%
@@ -55,12 +48,29 @@
 		text-align: left
 		vertical-align: middle
 		display: inline-block
+		+md
+			max-width: 778px 
+		+sm
+			max-width: 510px 
 	&__footer
 		margin-top: 35px
 	&__tooltip
 		position: absolute
 		right: 19px
 		bottom: 26px 
+		
+.mail
+	color: $white 
+	font-size: 12px
+	font-weight: 400 
+	writing-mode: vertical-lr
+	&:before
+		position: absolute
+		content: ""
+		top: -5px
+		left: -5px
+		right: -5px
+		bottom: -5px 
 
 .share
 	font-size: 15px
