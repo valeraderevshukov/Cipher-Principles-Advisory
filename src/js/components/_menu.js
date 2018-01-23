@@ -1,9 +1,8 @@
 import { BODY, OPEN, ACTIVE } from '../_constants';
 import { SCROLL_TO } from '../_utils';
 
-(() => {
-
-
+;(() => {
+  
   BODY.on('click', '.js-btn-open-nav', e => {
     console.log('fff');
     let $btn = $('.js-btn-open-nav');
