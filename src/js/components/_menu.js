@@ -4,7 +4,6 @@ import { SCROLL_TO } from '../_utils';
 ;(() => {
   
   BODY.on('click', '.js-btn-open-nav', e => {
-    console.log('fff');
     let $btn = $('.js-btn-open-nav');
     let $nav = $('.js-menu-mob');
     let $header = $('.js-header');
