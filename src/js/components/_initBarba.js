@@ -2,8 +2,8 @@ import { TweenLite } from 'gsap';
 import Barba from 'barba.js';
 import { DOC } from '../_constants';
 import stickySidebar from './_sticky-sidebar';
-import Preloader from './_preloader';
 import sections from './_sections';
+import Preloader from './_preloader';
 
 DOC.ready(() => {
   const pageContact = 'contact';
@@ -17,7 +17,7 @@ DOC.ready(() => {
   } ); 
 
   stickySidebar.init();
-  preloader.init();
   sections.init();
+  preloader.init();
   
 });
