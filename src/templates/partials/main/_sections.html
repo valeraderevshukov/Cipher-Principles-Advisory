@@ -3,6 +3,7 @@
 	{% for item in [
 		{
 			id: 'trust',
+			animation: true,
 			label: 'Trust',
 			title: 'Trusted advice',
 			icon: 'trust',
@@ -23,6 +24,7 @@
 		},
 		{
 			id: 'approach',
+			animation: true,
 			label: 'Approach',
 			title: 'Scientific approach',
 			icon: 'approach',
@@ -32,7 +34,7 @@
 			]
 		}
 	] %}
-		<div class="section" data-section="{{item.id}}">
+		<div class="section" data-section="{{item.id}}" {% if item.animation %}data-animation-section="{{item.id}}"{% endif %}>
 			<div class="section__header">
 				<div class="label section__label">{{item.label}}</div>
 				<h2 class="title-lg title-lg_simple section__title">{{item.title}}</h2>

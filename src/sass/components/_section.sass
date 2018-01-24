@@ -93,10 +93,28 @@
 			margin: 0
 	&__trust
 		top: 47%
-		svg 
+		[data-svg-wrapper] 
+			position: relative
+			display: inline-block
+			vertical-align: top
 			width: 190px
 			+lg 
-				width: 32%
+				max-width: 32%
+		[data-svg-container]
+			position: absolute
+			top: 50%
+			left: 50%
+			overflow: hidden
+			width: 46%
+			transform: translate3d(-42%,-56%,0)
+		[data-svg-icon]
+			width: 100%
+		[data-svg-icon="shield"]
+			opacity: 0
+			transform: translate3d(0,20%,0)
+		[data-svg-icon="check"]
+			opacity: 0.3
+			transform: translate3d(0,100%,0)
 	&__experience
 		top: 39.5%
 		img 
@@ -106,11 +124,43 @@
 				max-width: 61%
 	&__approach
 		top: 37.5%
-		svg 
+		[data-svg-wrapper] 
+			position: relative
+			display: inline-block
+			vertical-align: top
 			width: 293px
-			height: 297px
 			+lg 
 				max-width: 43%
+		[data-svg-inner]
+			position: relative
+			padding-bottom: 101.5%
+			width: 100%
+			height: 0
+		[data-svg-icon="target"]
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 81%
+			opacity: 0
+			transform: translate3d(0,20%,0)
+		[data-svg-icon="arrow"]
+			width: 100%
+		[data-svg-container]
+			position: absolute
+			top: -8%
+			right: 0
+			overflow: hidden
+			padding-bottom: 82%
+			width: 63%
+			height: 0
+			opacity: 0
+			transform: translate3d(18%,-12%,0) rotate(45deg)
+		[data-svg-box]
+			position: absolute
+			top: 6.5%
+			left: 0
+			width: 100%
+			transform: translate3d(0,0,0) rotate(-45deg)
 	&__icon
 		position: absolute
 		left: 0

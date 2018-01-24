@@ -3,6 +3,7 @@ import Barba from 'barba.js';
 import { DOC } from '../_constants';
 import stickySidebar from './_sticky-sidebar';
 import Preloader from './_preloader';
+import sections from './_sections';
 
 DOC.ready(() => {
   const pageContact = 'contact';
@@ -17,5 +18,6 @@ DOC.ready(() => {
 
   stickySidebar.init();
   preloader.init();
-
+  sections.init();
+  
 });
