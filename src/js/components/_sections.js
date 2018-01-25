@@ -1,6 +1,8 @@
 import {WIN} from '../_constants';
 
 export default {
+
+  //START SVG ANIMATIONS
   onViewPort(item) {
     return WIN.scrollTop() + WIN.outerHeight() < item.offset().top + item.outerHeight();
   },
@@ -43,6 +45,24 @@ export default {
       typeof this[name] === 'function' && this[name](section);
     });
   },
+  //END SVG ANIMATIONS
+
+  //START TEXT ANIMATIONS
+  show() {
+    $('[data-animation-section]').each((i, section) => {
+      section = $(section);
+      const items = section.find('[data-animation-section-item]');
+
+      new TimelineMax()
+        .staggerTo(items, 0.75, {
+          opacity: 1,
+          y: 0,
+          ease: Expo.easeOut
+        }, '0.2');
+    });
+  },
+  //END TEXT ANIMATIONS
+
   init() {
     this.playAnimations();
     WIN.on('scroll', () => this.playAnimations());
