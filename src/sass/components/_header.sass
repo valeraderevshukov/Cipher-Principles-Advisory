@@ -8,11 +8,14 @@
 	height: 83px
 	color: $black 
 	background-color: $alabaster 
+	&[data-anim-from]
+		position: absolute
 	+md
 		padding-top: 20px
 		height: 73px
 		color: $white 
-	&_main
+	&_anim
+		position: fixed
 		color: $white 
 		background-color: transparent
 	&__inner
@@ -72,7 +75,7 @@
 		.is-active &
 			+md
 				fill: $white 
-		.header_main &
+		.header_anim &
 			fill: $white
 .nav
 	float: left
@@ -103,7 +106,7 @@
 		transition: opacity .3s ease-in-out
 		+md
 			color: $white 
-		.header_main &
+		.header_anim &
 			color: $white 
 		+hover
 			opacity: 1
@@ -127,7 +130,7 @@
 		right: 0
 		margin-top: -2px
 		+arr(7,4,$black,b)
-		.header_main &
+		.header_anim &
 			+arr(7,4,$white,b)
 			+md
 				+arr(18,10,$white,b)
@@ -172,7 +175,7 @@
 		border-top: 4px solid $black
 		opacity: 0.87
 		transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out, border-color 0.3s
-		.header_main &
+		.header_anim &
 			border-color: $white 
 		&:nth-child(1)
 			top: 0

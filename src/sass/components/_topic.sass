@@ -10,6 +10,8 @@
 		bottom: 0
 		background-position: 40% 21%
 		background-repeat: no-repeat
+		&[data-anim-from="right-20"]
+			position: absolute
 	&__left
 		position: absolute
 		top: 0
@@ -18,6 +20,8 @@
 		z-index: 2
 		padding: 260px 0 44px 40px
 		font-size: 12px
+		&[data-anim-from]
+			position: absolute
 		+md
 			display: none
 	&__mail

@@ -1,0 +1,3 @@
+export default {
+  SPLIT_TEXT_COMPLATE: 'SPLIT_TEXT_COMPLATE'
+};

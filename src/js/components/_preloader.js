@@ -1,4 +1,5 @@
 import { TweenLite, TimelineMax } from 'gsap';
+import TopicAnim from './_topicAnim';
 
 export default class Preloader {
 
@@ -110,9 +111,11 @@ export default class Preloader {
       .to(preloader, 0.8, {
         alpha: 0,
         ease: Power1.easeInOut
-      }, 1.4)
+      }, 1.2)
+      .call( () => TopicAnim.play(), null, null, 1 )
       .eventCallback( 'onComplete', () => {
         preloader.remove();
+        
       });
   }
 

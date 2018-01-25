@@ -1,0 +1,24 @@
+// [data-stagger="rows"]
+[data-stagger="wrap"]
+	.is-split &
+		display: block
+		overflow: hidden
+[data-stagger="inner"]
+	.is-split &
+		position: relative
+		transform: translateY(100%)
+		opacity: 0
+		display: block
+		
+[data-anim-from]
+	position: relative
+	opacity: 0
+[data-anim-from="top"]
+	transform: translateY(-50px)
+[data-anim-from="top-10"]
+	transform: translateY(-10px)
+[data-anim-from="left"]
+	transform: translateX(-50px)
+[data-anim-from="right-20"]
+	transform: translateX(20px)
+

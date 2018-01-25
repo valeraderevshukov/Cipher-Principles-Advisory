@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header{% if headerClass %} header_{{ headerClass }}{% endif %} js-header" data-anim-from="top">
+<header class="header{% if headerClass %} header_{{ headerClass }}{% endif %} js-header" {% if headerClass === "main" %}data-anim-from="top"{% endif %}>
 	<div class="header__inner inner">
 		<!-- begin logo -->
 		<a href="./home.html" class="logo">

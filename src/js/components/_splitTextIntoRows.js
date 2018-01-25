@@ -1,5 +1,4 @@
 import { DOC } from '../_constants';
-
 class SplitIntoRows {
 
   constructor(props) {
@@ -47,7 +46,11 @@ class SplitIntoRows {
         if (!newLine.textContent.length) newLine.remove();
       }
       //if it's last word - remove white space and use this span for last line
-      if (i === wordsLength - 1) row.removeAttribute('style');
+      if (i === wordsLength - 1) {
+        row.removeAttribute('style');
+        this._container.classList.add('is-split');
+      }
+      
     }
   }
 
@@ -65,11 +68,12 @@ class SplitIntoRows {
   }
 
 }
-DOC.ready(() => {
+
+export default () => {
   let staggers = document.querySelectorAll('[data-stagger="rows"]');
   if (!staggers.length) return;
   for (var i = 0; i <= staggers.length - 1; i++) {
     new SplitIntoRows({ container: staggers[i] });
   }
-});
+};
 

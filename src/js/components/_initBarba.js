@@ -4,6 +4,7 @@ import { DOC } from '../_constants';
 import stickySidebar from './_sticky-sidebar';
 import sections from './_sections';
 import Preloader from './_preloader';
+import initSplitRws from './_splitTextIntoRows';
 
 DOC.ready(() => {
   const pageContact = 'contact';
@@ -14,10 +15,12 @@ DOC.ready(() => {
     if (currentStatus.namespace === pageContact) window.initMap();
     stickySidebar.init();
     preloader.init();
+    initSplitRws();
   } ); 
 
   stickySidebar.init();
   sections.init();
   preloader.init();
+  initSplitRws();
   
 });
