@@ -1,5 +1,3 @@
-import { TimelineMax } from 'gsap';
-
 export default {
   animTo(container, duration, delay) {
     if (!container) return;
@@ -14,16 +12,9 @@ export default {
     );
     
   },
-  header() {
-    const header = $('.js-header');
-    this.animTo(header);
-  },
-  topicLeft() {
-    const topicleft = $('.js-topic-left');
-    this.animTo(topicleft);
-  },
   title() {
     const rows = $('.js-topic [data-stagger="inner"]');
+    if (!rows) return;
     new TimelineMax()
       .staggerTo(rows, 0.6, {
         opacity: 1,

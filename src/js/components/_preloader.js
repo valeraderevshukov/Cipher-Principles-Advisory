@@ -1,4 +1,3 @@
-import { TweenLite, TimelineMax } from 'gsap';
 import TopicAnim from './_topicAnim';
 
 export default class Preloader {

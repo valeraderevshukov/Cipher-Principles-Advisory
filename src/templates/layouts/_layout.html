@@ -11,7 +11,7 @@
     <link rel="stylesheet" media="all" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
-  <body  id="barba-wrapper">
+  <body{% if bodyClass %} class="{{bodyClass}}"{% endif %} id="barba-wrapper">
     <!-- BEGIN content -->
     <div class="out barba-container" {% if nameSpace %}data-namespace="{{ nameSpace }}"{% endif %}>
       {% block content %}{% endblock %}
