@@ -1,7 +1,10 @@
 import stickySidebar from 'sticky-sidebar';
 import {WIN, ACTIVE} from '../_constants';
 import {SCROLL_TO} from '../_utils';
-
+const headerLinks = $('[data-nav-href]');
+headerLinks.on('click', e => {
+  e.preventDefault();
+});
 export default {
 
   toggleLine(state) {
@@ -17,7 +20,10 @@ export default {
       const id = link.data(attr);
       const section = $(`[data-section="${id}"]`);
       const top = section.offset().top;
-      link.on('click', e => SCROLL_TO(top));
+      link.on('click', e => {
+        e.preventDefault();
+        SCROLL_TO(top);
+      });
     };
 
     $('.js-sticky-sidebar')
