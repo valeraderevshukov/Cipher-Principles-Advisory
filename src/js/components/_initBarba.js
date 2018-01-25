@@ -13,12 +13,12 @@ DOC.ready(() => {
 
   Barba.Dispatcher.on('transitionCompleted', (currentStatus) => {
     if (currentStatus.namespace === pageContact) window.initMap();
-    stickySidebar.init();
+    // stickySidebar.init();
     preloader.init();
     initSplitRws();
   } ); 
 
-  stickySidebar.init();
+  // stickySidebar.init();
   sections.init();
   preloader.init();
   // setTimeout(sections.show, 5000);

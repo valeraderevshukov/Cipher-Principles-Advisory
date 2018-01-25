@@ -49,17 +49,18 @@ export default {
 
   //START TEXT ANIMATIONS
   show() {
-    $('[data-animation-section]').each((i, section) => {
-      section = $(section);
-      const items = section.find('[data-animation-section-item]');
-
-      new TimelineMax()
-        .staggerTo(items, 0.75, {
-          opacity: 1,
-          y: 0,
-          ease: Expo.easeOut
-        }, '0.2');
-    });
+    // $('[data-animation-section]').each((i, section) => {
+    //   section = $(section);
+      
+    // });
+    const items = $('[data-animation-section-item]');
+    if (!items) return;
+    new TimelineMax()
+      .staggerTo(items, 0.75, {
+        opacity: 1,
+        y: 0,
+        ease: Expo.easeOut
+      }, '0.2');
   },
   //END TEXT ANIMATIONS
 

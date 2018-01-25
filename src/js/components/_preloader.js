@@ -114,7 +114,6 @@ export default class Preloader {
       .call( () => TopicAnim.play(), null, null, 1 )
       .eventCallback( 'onComplete', () => {
         preloader.remove();
-        
       });
   }
 

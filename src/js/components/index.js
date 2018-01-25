@@ -5,3 +5,4 @@ import './_tooltip';
 import './_menu';
 import './_preloader';
 import './_topicAnim';
+import './_pageAnimation';
