@@ -1,6 +1,6 @@
 <!-- begin header -->
-<header class="header{% if headerClass %} header_{{ headerClass }}{% endif %} js-header" {% if headerClass === "main" %}data-anim-from="top"{% endif %}>
-	<div class="header__inner inner">
+<header class="header{% if headerClass %} header_{{ headerClass }}{% endif %} js-header">
+	<div class="header__inner inner js-header-inner" {% if headerClass === "anim" %}data-anim-from="top"{% endif %}>
 		<!-- begin logo -->
 		<a href="./home.html" class="logo">
 			<svg width="209" height="94" viewBox="0 0 209 94" xmlns="http://www.w3.org/2000/svg">

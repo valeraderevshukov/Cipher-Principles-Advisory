@@ -33,14 +33,14 @@ export default {
   },
 
   play() {
-    const header = $('.js-header');
+    const headerInner = $('.js-header-inner');
     const topicleft = $('.js-topic-left');
     const topicFooter = $('.js-topic-footer');
     const topicBg = $('.js-topic-bg');
     let that = this;
     new TimelineMax()
       .add( this.title, 0 )
-      .add( this.animTo(header), 0.6 )
+      .add( this.animTo(headerInner), 0.6 )
       .add( this.animTo(topicleft), 0.6 )
       .add( this.animTo(topicBg, 0.9), 1.1 )
       .add( this.animTo(topicFooter, 0.8), 2 );
