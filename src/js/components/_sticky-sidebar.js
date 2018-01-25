@@ -11,15 +11,23 @@ export default {
   },
 
   scrollTo() {
+    const headerLinks = $('[data-nav-href]');
+    const scrollToSection = (link, attr) => {
+      link = $(link);
+      const id = link.data(attr);
+      const section = $(`[data-section="${id}"]`);
+      const top = section.offset().top;
+      link.on('click', e => SCROLL_TO(top));
+    };
+
     $('.js-sticky-sidebar')
       .find('[data-href]')
       .each((i, link) => {
-        link = $(link);
-        const id = link.data('href');
-        const section = $(`[data-section="${id}"]`);
-        const top = section.offset().top;
-        link.on('click', e => SCROLL_TO(top));
+        scrollToSection(link, 'href');
       });
+    headerLinks.each((i, link) => {
+      scrollToSection(link, 'nav-href');
+    });
   },
 
   detectActiveSection() {
@@ -28,6 +36,7 @@ export default {
     const sidebar = $('.js-sticky-sidebar');
     const line = sidebar.find('[data-line]');
     const links = sidebar.find('[data-href]');
+    const headerLinks = $('[data-nav-href]');
 
     $('[data-section]').each((i, section) => {
 
@@ -37,12 +46,17 @@ export default {
       const link = links.filter(`[data-href="${id}"]`);
       const top = section.offset().top;
       const bottom = top + section.outerHeight();
+      const headerLink = headerLinks.filter(`[data-nav-href="${id}"]`);
 
       if (scrollTop >= top && scrollTop < bottom) {
-        link.addClass(ACTIVE);
+        link
+          .add(headerLink)
+          .addClass(ACTIVE);
         line.css('transform', `translate3d(0,${link.position().top}px,0)`);
       } else {
-        link.removeClass(ACTIVE);
+        link
+          .add(headerLink)
+          .removeClass(ACTIVE);
       }
 
     });
