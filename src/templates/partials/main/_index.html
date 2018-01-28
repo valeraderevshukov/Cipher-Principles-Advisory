@@ -1,5 +1,29 @@
 <!-- begin main -->
 <div class="main js-anim-page" data-anim-page="full">
+	{{ mixins.header(
+		[{
+			name: "About",
+			url: "./privacy.html"
+		},
+		{
+			name: "Services",
+			url: "#",
+			target: "trust"
+		},
+		{
+			name: "Client",
+			url: "#",
+			target: "client"
+		},
+		{
+			name: "Contact",
+			url: "./contact.html"
+		}], 
+		null,
+		null,
+		'js-page-back',
+		'js-header-main'
+	) }}
 	<div class="main__inner">
 		{% include './_sticky-nav.html' %}
 		{% include './_sections.html' %}

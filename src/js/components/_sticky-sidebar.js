@@ -19,7 +19,7 @@ export default {
       link = $(link);
       const id = link.data(attr);
       const section = $(`[data-section="${id}"]`);
-      const top = section.offset().top;
+      const top = section.offset().top - 140;
       link.on('click', e => {
         e.preventDefault();
         SCROLL_TO(top);
@@ -50,7 +50,7 @@ export default {
       const id = section.data('section');
 
       const link = links.filter(`[data-href="${id}"]`);
-      const top = section.offset().top;
+      const top = section.offset().top - 140;
       const bottom = top + section.outerHeight();
       const headerLink = headerLinks.filter(`[data-nav-href="${id}"]`);
 
@@ -76,9 +76,10 @@ export default {
     if (!sticky) return;
 
     new StickySidebar('.js-sticky-sidebar', {
-      topSpacing: 20,
+      topSpacing: 140,
       bottomSpacing: 20
     });
+    
     sticky.addEventListener('affix.top.stickySidebar', () => this.toggleLine(true));
     sticky.addEventListener('affix.static.stickySidebar', () => this.toggleLine(false));
     

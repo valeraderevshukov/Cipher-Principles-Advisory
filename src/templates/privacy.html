@@ -5,7 +5,12 @@ title: Privacy page
 
 {% block content %}
 	
-	{% include "partials/_header.html" %}
+	{{ mixins.header(
+		[{
+			name: "Contact",
+			url: "./contact.html"
+		}]
+	) }}
 	<article class="article privacy">
 		<h1 class="title-xl">Terms and conditions</h1>
 		{% for item in [

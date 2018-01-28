@@ -7,7 +7,27 @@ bodyClass: "is-fixed"
 
 {% block content %}
 	
-	{% include "partials/_header.html" %}
+	{{ mixins.header(
+		[{
+			name: "About",
+			url: "./privacy.html"
+		},
+		{
+			name: "Services",
+			url: "#",
+			target: "trust"
+		},
+		{
+			name: "Client",
+			url: "#",
+			target: "client"
+		},
+		{
+			name: "Contact",
+			url: "./contact.html"
+		}],
+		'anim'
+	) }}
 	{% include "partials/_preloader.html" %}
 	{% include "partials/_topic.html" %}
 	{% include 'partials/main/_index.html' %}
