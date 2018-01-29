@@ -13,4 +13,13 @@ import { SCROLL_TO } from '../_utils';
     $header.toggleClass(ACTIVE);
   });
 
+  BODY.on('click', '[data-nav-href]', e => {
+    let $btn = $('.js-btn-open-nav');
+    let $nav = $('.js-menu-mob');
+    let $header = $('.js-header, .js-header-main');
+    $nav.removeClass(OPEN);
+    $btn.removeClass(ACTIVE);
+    $header.removeClass(ACTIVE);
+  });
+
 })();

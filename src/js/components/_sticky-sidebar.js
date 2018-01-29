@@ -22,9 +22,9 @@ function onScroll(event) {
     const id = that.data('section');
     const currentLink = $('[data-href="'+id+'"], .header:not(.header_anim) [data-nav-href="'+id+'"]');
     const currentSidebarLink = $('[data-href="'+id+'"]');
-    
+
     if (!currentSidebarLink.length) return;
-    const topPos = that.offset().top - topPadding;
+    const topPos = that.offset().top - (topPadding + 5);
     const bottomPos = topPos + that.outerHeight();
     const currentPosition = currentSidebarLink.position().top;
 
