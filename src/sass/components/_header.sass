@@ -169,6 +169,16 @@
 		+md
 			margin-top: -5px
 			+arr(18,10,$white,b)
+	&__current
+		position: relative
+		z-index: 1
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: 0
+			right: -12px
+			bottom: 0
 	&__list
 		position: absolute
 		top: 100%
