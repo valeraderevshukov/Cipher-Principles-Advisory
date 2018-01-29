@@ -66,6 +66,6 @@ export default {
 
   init() {
     this.playAnimations();
-    WIN.on('scroll', () => this.playAnimations());
+    WIN.on('scroll', () => {this.playAnimations();} );
   }
 };

@@ -58,7 +58,7 @@
 	&__wrap
 		+md
 			position: absolute
-			top: 0
+			top: -20px
 			right: 0
 			width: 100vw
 			z-index: 200
@@ -121,10 +121,12 @@
 		transition: opacity .3s ease-in-out
 		+md
 			color: $white 
-		.header_anim &
-			color: $white 
 		+hover
 			opacity: 1
+		&.is-active
+			opacity: 1
+		.header_anim &
+			color: $white 
 .lang
 	position: relative
 	float: right
@@ -142,6 +144,10 @@
 	&.is-active
 		&:before
 			transform: rotate(180deg)
+		.lang__list
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
 	&:before
 		position: absolute
 		content: ""
@@ -166,10 +172,14 @@
 		transform: translateY(8px)
 		visibility: hidden
 		transition: opacity 0.1s ease-in, visibility 0.1s ease-in, transform 0.1s ease-in
-		.is-active &
-			opacity: 1
-			visibility: visible
-			transform: translateY(0)
+		.header__wrap &
+			+md
+				top: auto
+				right: auto
+				left: 0
+				bottom: 100%
+				text-align: left
+				transform: translateY(-8px)
 	&__item
 		margin-top: 10px
 		line-height: 1.1

@@ -29,6 +29,7 @@ export default {
     const topicFooter = $('.js-topic-footer');
     const topicBg = $('.js-topic-bg');
     let that = this;
+    let reverseAnim = false;
     new TimelineMax()
       .add( this.title, 0 )
       .add( this.animTo(headerInner), 0.6 )

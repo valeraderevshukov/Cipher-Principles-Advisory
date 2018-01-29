@@ -3,6 +3,8 @@ import sections from './_sections';
 import stickySidebar from './_sticky-sidebar';
 import { SCROLL_WIDTH } from './_scrollWidth';
 import { SCROLL_TO } from '../_utils';
+import EVENT from '../communication/_events';
+import OBSERVER from '../communication/_observer';
 
 const startTrigger = '.js-start-anim-trigger';
 
@@ -30,6 +32,7 @@ BODY.on('click', startTrigger, function() {
       WIN.trigger('scroll');
       stickySidebar.init();
       headerAnim.css({ right: 0});
+      OBSERVER.ON_FIRE(EVENT.TOPIC_ANIM_COMPLATE);
     });
 });
 

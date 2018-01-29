@@ -1,4 +1,5 @@
 import TopicAnim from './_topicAnim';
+import { WIN, HTMLBODY } from '../_constants';
 
 export default class Preloader {
 
@@ -113,6 +114,9 @@ export default class Preloader {
       }, 1.2)
       .call( () => TopicAnim.play(), null, null, 1 )
       .eventCallback( 'onComplete', () => {
+        HTMLBODY.animate(() => {
+          scrollTop: 0;
+        }, 0);
         preloader.remove();
       });
   }
