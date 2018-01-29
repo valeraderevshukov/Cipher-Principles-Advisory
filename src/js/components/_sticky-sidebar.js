@@ -1,8 +1,8 @@
 import stickySidebar from 'sticky-sidebar';
-import {WIN, ACTIVE, BODY} from '../_constants';
-import {SCROLL_TO} from '../_utils';
-import EVENT from '../communication/_events';
-import OBSERVER from '../communication/_observer';
+import {WIN, ACTIVE, BODY} from './../_constants';
+import {SCROLL_TO} from './../_utils';
+import EVENT from './../communication/_events';
+import OBSERVER from './../communication/_observer';
 
 const links = $('.js-sticky-sidebar [data-href]');
 const headerLinks = $('.header:not(.header_anim) [data-nav-href]');
@@ -22,6 +22,7 @@ function onScroll(event) {
     const id = that.data('section');
     const currentLink = $('[data-href="'+id+'"], .header:not(.header_anim) [data-nav-href="'+id+'"]');
     const currentSidebarLink = $('[data-href="'+id+'"]');
+    
     if (!currentSidebarLink.length) return;
     const topPos = that.offset().top - topPadding;
     const bottomPos = topPos + that.outerHeight();
@@ -56,19 +57,6 @@ const scrollToSection = (link, attr, obsEvent) => {
     } );
   }
 };
-
-// links.on('click', function(e) {
-//   e.preventDefault();
-//   scrollToSection(this, 'href');
-// });
-// headerLinks.on('click', function(e) {
-//   e.preventDefault();
-//   scrollToSection(this, 'nav-href');
-// });
-// headerAnimLinks.on('click', function(e) {
-//   e.preventDefault();
-//   scrollToSection(this, 'nav-href', true);
-// });
 
 BODY.on('click', '.js-sticky-sidebar [data-href]', function(e) {
   e.preventDefault();
