@@ -12,26 +12,14 @@ import { SCROLL_TO } from '../_utils';
     $btn.toggleClass(ACTIVE);
     $header.toggleClass(ACTIVE);
   });
-  BODY.on('click', '.js-menu-mob', function(e) {
+
+  BODY.on('click', '[data-nav-href]', e => {
     let $btn = $('.js-btn-open-nav');
     let $nav = $('.js-menu-mob');
     let $header = $('.js-header, .js-header-main');
-    e.preventDefault();
     $nav.removeClass(OPEN);
     $btn.removeClass(ACTIVE);
     $header.removeClass(ACTIVE);
   });
-
-  // BODY.click(e => {
-  //   const $target = $(e.target);
-  //   let $btn = $('.js-btn-open-nav');
-  //   let $nav = $('.js-menu-mob');
-  //   let header = '.js-header';
-  //   let $header = $('.js-btn-open-nav');
-  //   if ($target.closest(header).length) return;
-  //   $nav.removeClass(OPEN);
-  //   $btn.removeClass(ACTIVE);
-  //   $header.removeClass(ACTIVE);
-  // });
 
 })();

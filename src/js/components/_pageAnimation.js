@@ -1,10 +1,10 @@
-import { WIN, BODY, FIXED, HTMLBODY } from '../_constants';
+import { WIN, BODY, FIXED, HTMLBODY } from './../_constants';
 import sections from './_sections';
 import stickySidebar from './_sticky-sidebar';
 import { SCROLL_WIDTH } from './_scrollWidth';
-import { SCROLL_TO } from '../_utils';
-import EVENT from '../communication/_events';
-import OBSERVER from '../communication/_observer';
+import { SCROLL_TO } from './../_utils';
+import EVENT from './../communication/_events';
+import OBSERVER from './../communication/_observer';
 
 const startTrigger = '.js-start-anim-trigger';
 
@@ -49,24 +49,22 @@ BODY.on('click', pageBack, function(e) {
     scrollTop: 0
   }, duration, () => {
     new TimelineMax()
-      .call( () => {
-      }, null, null, 0 )
-	  .to(page, 0.5, {
-	    transform: 'translateY(100vh)',
-	    ease: Power1.easeInOut
-	  }, 0)
-	  .to(topicWrap, 0.5, {
-	    y: 0,
-	    alpha: 1,
-	    ease: Power1.easeInOut
-	  }, 0)
-	  .eventCallback( 'onComplete', () => {
-	  	if (scrollWidth > 0) {
-	  		BODY.css({ paddingRight: scrollWidth });
-	  		headerAnim.css({ right: scrollWidth });
-	  	}
+      .to(page, 0.5, {
+        transform: 'translateY(100vh)',
+        ease: Power1.easeInOut
+      }, 0)
+      .to(topicWrap, 0.5, {
+        y: 0,
+        alpha: 1,
+        ease: Power1.easeInOut
+      }, 0)
+      .eventCallback( 'onComplete', () => {
+        if (scrollWidth > 0) {
+          BODY.css({ paddingRight: scrollWidth });
+          headerAnim.css({ right: scrollWidth });
+        }
         page.removeClass(clearTransform);
         BODY.addClass(FIXED);
-	  });
+      });
   });
 });
