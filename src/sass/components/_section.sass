@@ -1,20 +1,22 @@
 .section
 	position: relative
 	padding-bottom: 192px
-	+lg 
+	+lgd 
 		padding: 50px 0
-	+md
-		padding: 21px 0 20px
+	+mdd
+		padding: 21px 20px 20px
 	&:first-child
-		padding-top: 15px
+		// padding-top: 15px
+		padding-top: 160px
+		+lgd
+			padding-top: 140px
 	&:last-child
 		padding-bottom: 78px
-	&:first-child,
 	&:last-child
-		+lg 
+		+lgd 
 			padding-top: 50px
 			padding-bottom: 50px
-		+sm 
+		+mdd 
 			padding-top: 21px
 			padding-bottom: 20px
 	&__header,
@@ -22,25 +24,31 @@
 		position: relative
 		z-index: 2
 		width: 380px
-		+md 
-			padding-left: 20px
-			padding-right: 20px
+		+lgd 
+			width: 50%
+			padding-right: 40px
+		+mdd 
+			padding-right: 0
 	&__header
-		+lg
+		+mdd
 			margin-bottom: -80px
-		+md 
+		+mdd 
 			width: 100%
 			max-width: 420px
 		+sm 
 			margin-bottom: -45px
 			max-width: 280px
 	&__description
-		+lg 
+		+mdd 
 			clear: both
 			padding-top: 41px
 			width: 100%
 		p
 			+f(18px, 400, 28px)
+			+lgd
+				+f(14px, null, 28/18)
+			+mdd 
+				+f(13px, null, 18px)
 			&:not(:last-child)
 				margin-bottom: 28px
 			a 
@@ -67,7 +75,10 @@
 		bottom: 0
 		background: $lightGray
 		+vertical
-		+lg 
+		+lgd 
+			left: auto
+			width: 50%
+		+mdd 
 			position: relative
 			top: auto 
 			left: auto 
@@ -77,19 +88,19 @@
 			padding-bottom: 66%
 			width: 72%
 			height: 0
-		+md 
+		+mdd 
 			padding-bottom: 50%
 			width: 60%
 		+sm
-			padding-bottom: 66%
-			width: 72%
+			padding-bottom: 74%
+			width: 81%
 	&__label
 		margin-bottom: 16px
 		+sm 
 			margin-bottom: 8px
 	&__title
 		margin-bottom: 35px
-		+lg
+		+mdd
 			margin: 0
 	&__trust
 		top: 47%
@@ -98,7 +109,9 @@
 			display: inline-block
 			vertical-align: top
 			width: 190px
-			+lg 
+			+lgd 
+				max-width: 35%
+			+mdd
 				max-width: 32%
 		[data-svg-container]
 			position: absolute
@@ -117,11 +130,12 @@
 			transform: translate3d(0,100%,0)
 	&__experience
 		top: 39.5%
+		padding: 0 60px
+		+mdd 
+			padding: 0 53px
 		img 
 			width: 498px
-			max-width: 90%
-			+lg 
-				max-width: 61%
+			max-width: 100%
 	&__approach
 		top: 37.5%
 		[data-svg-wrapper] 
@@ -129,7 +143,7 @@
 			display: inline-block
 			vertical-align: top
 			width: 293px
-			+lg 
+			+lgd 
 				max-width: 43%
 		[data-svg-inner]
 			position: relative
@@ -168,7 +182,7 @@
 		font-size: 0
 		text-align: center
 		transform: translate3d(0,-50%,0)
-		+lg 
+		+lgd 
 			top: 50%
 	[data-animation-section-item]
 		opacity: 0
@@ -176,5 +190,5 @@
 
 .sections
 	border-bottom: 1px solid rgba($black, 0.2)
-	+md 
+	+mdd 
 		padding-bottom: 41px
