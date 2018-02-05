@@ -53,7 +53,7 @@ export default {
     //   section = $(section);
       
     // });
-    const items = $('[data-animation-section-item]');
+    const items = $('[data-animation-section-item], [data-stagger="wrap"] span');
     if (!items) return;
     new TimelineMax()
       .staggerTo(items, 0.75, {

@@ -1,6 +1,6 @@
 import { TweenLite } from 'gsap';
 import Barba from 'barba.js';
-import { DOC, BODY, FIXED } from '../_constants';
+import { DOC, BODY, FIXED, HTMLBODY } from '../_constants';
 import stickySidebar from './_sticky-sidebar';
 import sections from './_sections';
 import Preloader from './_preloader';
@@ -13,7 +13,16 @@ DOC.ready(() => {
   Barba.Pjax.start();
 
   Barba.Dispatcher.on('transitionCompleted', (currentStatus) => {
-    if (BODY.find(topic).length) BODY.addClass(FIXED);
+    const pageHome = 'home';
+    if (BODY.find(topic).length) {
+      BODY.addClass(FIXED);
+    }
+    else {
+      HTMLBODY.animate({
+        scrollTop: 0
+      }, 300);
+      BODY.removeClass(FIXED);
+    };
     if (currentStatus.namespace === pageContact) window.initMap();
     stickySidebar.init();
     preloader.init();
@@ -27,3 +36,4 @@ DOC.ready(() => {
   initSplitRws();
   
 });
+
