@@ -68,6 +68,22 @@ export default {
     const sectionsBottom = sections.offset().top + sections.outerHeight();
     const headerHeight = $('.js-header-inner').outerHeight() + $('.js-header-inner').position().top;
 
+    $('.js-section-icon').each((i, icon) => {
+      icon = $(icon);
+      const iconIn = icon.find('.js-section-icon-in');
+      const iconWidth = icon.outerWidth();
+      const left = icon.offset().left;
+      const top = sectionsBottom - icon.offset().top - iconIn.outerHeight();
+      const translate = windowBottom <= sectionsBottom ? `${left}px,0,0` : `0,${top}px,0`;
+
+      (windowBottom <= sectionsBottom) ? iconIn.removeClass('is-static') : iconIn.addClass('is-static');
+
+      iconIn.css({
+        width: `${iconWidth}px`,
+        transform: `translate3d(${translate})`
+      });
+    });
+
     $('.js-section').each((i, section) => {
       section = $(section);
       const icon = section.find('.js-section-icon-in');
@@ -89,22 +105,6 @@ export default {
         
         typeof this[name] === 'function' && this[name](section);
       }
-    });
-
-    $('.js-section-icon').each((i, icon) => {
-      icon = $(icon);
-      const iconIn = icon.find('.js-section-icon-in');
-      const iconWidth = icon.outerWidth();
-      const left = icon.offset().left;
-      const top = sectionsBottom - icon.offset().top - iconIn.outerHeight();
-      const translate = windowBottom <= sectionsBottom ? `${left}px,0,0` : `0,${top}px,0`;
-
-      (windowBottom <= sectionsBottom) ? iconIn.removeClass('is-static') : iconIn.addClass('is-static');
-
-      iconIn.css({
-        width: `${iconWidth}px`,
-        transform: `translate3d(${translate})`
-      });
     });
   },
 
