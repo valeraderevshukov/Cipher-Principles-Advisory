@@ -8,3 +8,4 @@ import './_topicAnim';
 import './_pageAnimation';
 import './_drop';
 import './_stickyHeader';
+import './_inversion';
