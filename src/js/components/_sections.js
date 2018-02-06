@@ -112,7 +112,7 @@ export default {
   init() {
     // this.playAnimations();
     // WIN.on('scroll', () => this.playAnimations() );
-    this.stickyIcons();
+    // this.stickyIcons();
     if (WIN.initedSections) return;
     WIN.initedSections = true;
     WIN.on('resize', () => this.stickyIcons() );
