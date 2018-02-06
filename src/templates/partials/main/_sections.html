@@ -1,5 +1,5 @@
 <!-- begin sections -->
-<div class="sections">
+<div class="sections js-sections">
 	{% for item in [
 		{
 			id: 'trust',
@@ -34,16 +34,18 @@
 			]
 		}
 	] %}
-		<div class="section" data-section="{{item.id}}" {% if item.animation %}data-animation-section="{{item.id}}"{% endif %}>
+		<div class="section js-section" data-section="{{item.id}}" {% if item.animation %}data-animation-section="{{item.id}}"{% endif %}>
 			<div class="section__header">
 				<div class="label section__label" data-animation-section-item>{{item.label}}</div>
 				<h2 class="title-lg title-lg_simple section__title" data-stagger="rows">{{item.title}}</h2>
 			</div>
-			<div class="section__figure">
-				<div class="section__icon section__{{item.icon}}">
-					{% if item.icon %}
-						{% include './_icon-' + item.icon + '.html' %}
-					{% endif %}
+			<div class="section__figure js-section-icon">
+				<div class="section__figure-in js-section-icon-in">
+					<div class="section__icon section__{{item.icon}}">
+						{% if item.icon %}
+							{% include './_icon-' + item.icon + '.html' %}
+						{% endif %}
+					</div>
 				</div>
 			</div>
 			<div class="section__description" data-animation-section-item>

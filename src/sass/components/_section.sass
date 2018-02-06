@@ -1,6 +1,13 @@
+// body.is-fixed
+// 	.section__figure
+// 		position: absolute
+// 		top: 0
+
+
 .section
 	position: relative
-	padding-bottom: 192px
+	padding-top: 50px
+	padding-bottom: 142px
 	+lgd 
 		padding: 50px 0
 	+mdd
@@ -19,6 +26,10 @@
 		+mdd 
 			padding-top: 21px
 			padding-bottom: 20px
+	&.is-active
+		.section__figure-in
+			opacity: 1
+			visibility: visible
 	&__header,
 	&__description
 		position: relative
@@ -73,8 +84,7 @@
 		left: 420px
 		right: 0
 		bottom: 0
-		background: $lightGray
-		+vertical
+		// background: $lightGray
 		+lgd 
 			left: auto
 			width: 50%
@@ -94,6 +104,27 @@
 		+sm
 			padding-bottom: 74%
 			width: 81%
+		&-in
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100vh
+			opacity: 0
+			visibility: hidden
+			background: $lightGray
+			+vertical
+			transition: opacity 0.6s, visibility 0.6s
+			+gpu
+			+mdd 
+				position: absolute !important
+				width: 100% !important
+				height: 100% !important
+				opacity: 1
+				visibility: visible
+				transform: translate3d(0,0,0) !important
+			&.is-static
+				position: relative
 	&__label
 		margin-bottom: 16px
 		+sm 
@@ -103,7 +134,7 @@
 		+mdd
 			margin: 0
 	&__trust
-		top: 47%
+		// top: 47%
 		[data-svg-wrapper] 
 			position: relative
 			display: inline-block
@@ -129,7 +160,7 @@
 			opacity: 0.3
 			transform: translate3d(0,100%,0)
 	&__experience
-		top: 39.5%
+		// top: 39.5%
 		padding: 0 60px
 		+mdd 
 			padding: 0 53px
@@ -137,7 +168,7 @@
 			width: 498px
 			max-width: 100%
 	&__approach
-		top: 37.5%
+		// top: 37.5%
 		[data-svg-wrapper] 
 			position: relative
 			display: inline-block
@@ -177,6 +208,7 @@
 			transform: translate3d(0,0,0) rotate(-45deg)
 	&__icon
 		position: absolute
+		top: 50%
 		left: 0
 		right: 0
 		font-size: 0
