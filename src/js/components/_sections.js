@@ -65,6 +65,7 @@ export default {
   stickyIcons() {
     const windowBottom = WIN.outerHeight() + WIN.scrollTop();
     const sections = $('.js-sections');
+    if (!sections.length) return;
     const sectionsBottom = sections.offset().top + sections.outerHeight();
     const headerHeight = $('.js-header-inner').outerHeight() + $('.js-header-inner').position().top;
 
@@ -112,6 +113,8 @@ export default {
     // this.playAnimations();
     // WIN.on('scroll', () => this.playAnimations() );
     this.stickyIcons();
+    if (WIN.initedSections) return;
+    WIN.initedSections = true;
     WIN.on('resize', () => this.stickyIcons() );
     WIN.on('scroll', () => this.stickyIcons() );
   }
