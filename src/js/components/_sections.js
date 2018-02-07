@@ -15,7 +15,7 @@ export default {
       .to(section.find('[data-svg-icon="shield"]'), 0.6, {
         opacity: 1,
         y: 0
-      })
+      }, '+=0.4')
       .to(section.find('[data-svg-icon="check"]'), 0.3, {
         opacity: 1,
         y: 0
@@ -30,7 +30,7 @@ export default {
       .to(section.find('[data-svg-icon="target"]'), 0.6, {
         opacity: 1,
         y: 0
-      })
+      }, '+=0.4')
       .to(section.find('[data-svg-container]'), 0.2, {
         opacity: 1,
         y: 0,
