@@ -32,7 +32,6 @@ DOC.ready(() => {
   stickySidebar.init();
   sections.init();
   preloader.init();
-  // setTimeout(sections.show, 5000);
   initSplitRws();
   
 });

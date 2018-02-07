@@ -51,8 +51,8 @@ export default {
   //END SVG ANIMATIONS
 
   //START TEXT ANIMATIONS
-  show() {
-    const items = $('[data-animation-section-item], [data-stagger="wrap"] span');
+  show(section) {
+    const items = section.find('[data-animation-section-item], [data-stagger="wrap"] span');
     if (!items) return;
     new TimelineMax()
       .staggerTo(items, 0.75, {
@@ -105,6 +105,11 @@ export default {
         const name = section.data('animation-section');
         
         typeof this[name] === 'function' && this[name](section);
+      }
+
+      if (section.offset().top < windowBottom - WIN.outerHeight()*0.3 && !section.get(0).wasAnimated) {
+        section.get(0).wasAnimated = true;
+        this.show(section);
       }
     });
   },

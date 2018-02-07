@@ -28,7 +28,7 @@ BODY.on('click', startTrigger, function() {
       page.addClass(clearTransform);
       BODY.removeClass(FIXED);
       BODY.css({ paddingRight: 0});
-      sections.show();
+      // sections.show();
       WIN.trigger('scroll');
       stickySidebar.init();
       headerAnim.css({ right: 0});
