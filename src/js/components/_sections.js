@@ -90,6 +90,11 @@ export default {
       const icon = section.find('.js-section-icon-in');
       const top = WIN.scrollTop() + headerHeight;
 
+      if (section.offset().top < windowBottom - WIN.outerHeight()*0.3 && !section.get(0).wasAnimated) {
+        section.get(0).wasAnimated = true;
+        this.show(section);
+      }
+
       if (windowBottom > sectionsBottom) {
         $('.js-section').removeClass(ACTIVE);
         section.last().addClass(ACTIVE);
@@ -105,11 +110,6 @@ export default {
         const name = section.data('animation-section');
         
         typeof this[name] === 'function' && this[name](section);
-      }
-
-      if (section.offset().top < windowBottom - WIN.outerHeight()*0.3 && !section.get(0).wasAnimated) {
-        section.get(0).wasAnimated = true;
-        this.show(section);
       }
     });
   },
