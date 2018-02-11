@@ -1,3 +1,6 @@
+import EVENT from './../communication/_events';
+import OBSERVER from './../communication/_observer';
+
 export default {
   animTo(container, duration, delay) {
     if (!container) return;
@@ -36,7 +39,10 @@ export default {
       .add( this.animTo(headerInner), 0.6 )
       .add( this.animTo(topicleft), 0.6 )
       .add( this.animTo(topicBg, 0.9), 1.1 )
-      .add( this.animTo(topicFooter, 0.8), 2 )
-      .add( this.animTo(tooltip, 0.35), 2.8 );
+      .add( this.animTo(topicFooter, 1), 2 )
+      .add( this.animTo(tooltip, 0.35), 2.8 )
+      .eventCallback( 'onComplete', () => {
+        OBSERVER.ON_FIRE(EVENT.TOPIC_ANIM_TEXT_COMPLATE);
+      });
   }
 };
