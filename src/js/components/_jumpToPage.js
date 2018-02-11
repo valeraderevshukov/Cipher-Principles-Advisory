@@ -12,19 +12,19 @@ BODY.on('click', jumpLink, function() {
 });
 
 OBSERVER.SUB(EVENT.TOPIC_ANIM_TEXT_COMPLATE, () => {
-  	const page = window.sectionActive;
-  	if (!page) return;
-  console.log('TOPIC_ANIM_TEXT_COMPLATE', page);
+  const page = window.sectionActive;
+  if (!page) return;
   const topicAnimTrigger = $('.js-start-anim-trigger');
   topicAnimTrigger.trigger('click');
 });
 
 OBSERVER.SUB(EVENT.TOPIC_ANIM_COMPLATE, () => {
-  	let page = window.sectionActive;
-  	if (!page) return;
-  console.log('TOPIC_ANIM_COMPLATE', page);
+  let page = window.sectionActive;
+  if (!page) return;
   const section = $(`[data-section="${page}"]`);
-  const top = section.offset().top;
+  const headerInner = $('.js-header-inner');
+  const topPadding = headerInner.outerHeight() + headerInner.position().top;
+  const top = section.offset().top - topPadding;
   SCROLL_TO(top);
   window.sectionActive = null;
 });
