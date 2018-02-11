@@ -1,7 +1,7 @@
 <!-- begin service -->
-<div class="service" data-section="services">
+<div class="service js-section" data-section="services">
 	<div class="service__inner">
-		<h2 class="title-lg title-lg_simple service__title">Advisory Service</h2>
+		<h2 class="title-lg title-lg_simple service__title" data-stagger="rows">Advisory Service</h2>
 		<div class="service__container">
 			<div class="service__row">
 				{% for item in [
@@ -17,12 +17,14 @@
 					}
 				] %}
 					<div class="service__col">
-						<div class="service__icon">
-							{{mixins.icon(item.icon)}}
-						</div>
-						<h3 class="title-md service__subtitle">{{item.title}}</h3>
-						<div class="service__description">
-							<p>{{item.description}}</p>
+						<div data-animation-section-item>
+							<div class="service__icon">
+								{{mixins.icon(item.icon)}}
+							</div>
+							<h3 class="title-md service__subtitle">{{item.title}}</h3>
+							<div class="service__description">
+								<p>{{item.description}}</p>
+							</div>
 						</div>
 					</div>
 				{% endfor %}
