@@ -15,6 +15,7 @@ DOC.ready(() => {
   Barba.Pjax.start();
 
   Barba.Dispatcher.on('transitionCompleted', (currentStatus) => {
+    window.scrollFlug = true;
     const pageHome = 'home';
     if (BODY.find(topic).length) {
       BODY.addClass(FIXED);
