@@ -1,7 +1,7 @@
 import { BODY, ACTIVE } from '../_constants';
-const dropCurrent = '.js-drop-current';
 import { TOUCH } from './../_utils';
 
+const dropCurrent = '.js-drop-current';
 const activeLang = 'is-active-lang';
 BODY.on('click', dropCurrent, function() {
   const drop = $(this).parents('.js-drop');
