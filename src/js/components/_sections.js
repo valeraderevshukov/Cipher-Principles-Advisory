@@ -97,8 +97,8 @@ export default {
 
       if (windowBottom > sectionsBottom) {
         $('.js-section').removeClass(ACTIVE);
-        section.last().addClass(ACTIVE);
-        const name = section.last().data('animation-section');
+        sections.find('.js-section').last().addClass(ACTIVE);
+        const name = sections.find('.js-section').last().data('animation-section');
 
         typeof this[name] === 'function' && this[name](section);
         return;
