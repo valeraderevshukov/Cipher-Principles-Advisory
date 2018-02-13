@@ -5,6 +5,8 @@ import stickySidebar from './_sticky-sidebar';
 import sections from './_sections';
 import Preloader from './_preloader';
 import initSplitRws from './_splitTextIntoRows';
+import EVENT from './../communication/_events';
+import OBSERVER from './../communication/_observer';
 
 DOC.ready(() => {
   const pageContact = 'contact';

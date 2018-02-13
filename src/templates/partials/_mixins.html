@@ -129,7 +129,7 @@
 			<nav class="header__nav nav">
 				<ul class="nav__list"> 
 					{% for item in pages %}
-						<li class="nav__item"><a class="nav__link" href="{{ item.url }}"{% if item.target %} data-nav-href="{{item.target}}"{% endif %}>{{ item.name }}</a></li>
+						<li class="nav__item"><a class="nav__link" href="{{ item.url }}"{% if item.target %} data-nav-href="{{item.target}}"{% endif %}{% if item.jump %} data-jump-href="{{item.jump}}"{% endif %}>{{ item.name }}</a></li>
 					{% endfor %}
 				</ul>
 			</nav>
