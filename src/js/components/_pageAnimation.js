@@ -88,11 +88,8 @@ const animationToSwipeDown = () => {
   let timeout;
   BODY.on('mousewheel', function(event) {
     if (!event.originalEvent.wheelDelta >= 0 && window.scrollFlug) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        window.scrollFlug = false;
-        $(startTrigger).trigger('click');
-      }, 100);
+      window.scrollFlug = false;
+      $(startTrigger).trigger('click');
     }
   });
 };
