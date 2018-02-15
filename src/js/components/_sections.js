@@ -8,8 +8,8 @@ export default {
   },
   trust(section) {
     // if (this.onViewPort(section.find('[data-svg-wrapper]')) || section.animationPlayed) return;
-    if (section.anumationPlayed) return;
-    section.anumationPlayed = true;
+    if (section.get(0).anumationPlayed) return;
+    section.get(0).anumationPlayed = true;
 
     new TimelineMax()
       .to(section.find('[data-svg-icon="shield"]'), 0.6, {
@@ -23,8 +23,8 @@ export default {
   },
   approach(section) {
     // if (this.onViewPort(section.find('[data-svg-wrapper]')) || section.animationPlayed) return;
-    if (section.anumationPlayed) return;
-    section.anumationPlayed = true;
+    if (section.get(0).anumationPlayed) return;
+    section.get(0).anumationPlayed = true;
 
     new TimelineMax()
       .to(section.find('[data-svg-icon="target"]'), 0.6, {
