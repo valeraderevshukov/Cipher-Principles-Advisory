@@ -104,7 +104,7 @@ export default {
         return;
       }
 
-      if (top >= section.offset().top && top <= section.offset().top + section.outerHeight() && !section.hasClass(ACTIVE)) {
+      if (top + WIN.outerHeight()/2 >= section.offset().top && top + WIN.outerHeight()/2 <= section.offset().top + section.outerHeight() && !section.hasClass(ACTIVE)) {
         $('.js-section').removeClass(ACTIVE);
         section.addClass(ACTIVE);
         const name = section.data('animation-section');
