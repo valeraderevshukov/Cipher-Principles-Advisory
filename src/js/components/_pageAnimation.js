@@ -77,11 +77,11 @@ const animationToSwipeDown = () => {
   let yUp;
   const topic = $('.js-topic');
   if (!TOUCH) return;
-  topic
+  BODY
     .on('mousedown touchstart', function(e) {
       yDown = e.pageY;
     })
-    .on('mouseup touchend',function(e) {
+    .on('mouseup touchend', '.js-topic', function(e) {
       yUp = e.pageY;
       if (yDown > yUp && window.scrollFlug) $(startTrigger).trigger('click');
     });
