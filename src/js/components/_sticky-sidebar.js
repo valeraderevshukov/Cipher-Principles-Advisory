@@ -1,4 +1,4 @@
-import stickySidebar from 'sticky-sidebar';
+import StickySidebar from 'sticky-sidebar';
 import {WIN, ACTIVE, BODY} from './../_constants';
 import {SCROLL_TO} from './../_utils';
 import EVENT from './../communication/_events';
