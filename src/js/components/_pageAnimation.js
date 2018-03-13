@@ -27,6 +27,7 @@ BODY.on('click', startTrigger, function() {
     }, 0)
     .eventCallback( 'onComplete', () => {
       window.scrollFlug = false;
+      window.scrollUpFlug = true;
       page.addClass(clearTransform);
       BODY.removeClass(FIXED);
       BODY.css({ paddingRight: 0});
@@ -62,6 +63,7 @@ BODY.on('click', pageBack, function(e) {
       }, 0)
       .eventCallback( 'onComplete', () => {
         window.scrollFlug = true;
+        window.scrollUpFlug = false;
         if (scrollWidth > 0) {
           BODY.css({ paddingRight: scrollWidth });
           headerAnim.css({ right: scrollWidth });
@@ -72,11 +74,23 @@ BODY.on('click', pageBack, function(e) {
   });
 });
 
+window.scrollUpFlug = false;
 const animationToSwipeDown = () => {
   let yDown;
   let yUp;
   const topic = $('.js-topic');
-  if (!TOUCH) return;
+  BODY.on('mousewheel', function(event) {
+    const iCurScrollPos = $(window).scrollTop();
+    if (event.originalEvent.wheelDelta <= 0 && window.scrollFlug) {
+      window.scrollFlug = false;
+      $(startTrigger).trigger('click');
+    }
+    else if (iCurScrollPos === 0 && event.originalEvent.wheelDelta >= 0 && window.scrollUpFlug) {
+      window.scrollUpFlug = false;
+      $(pageBack).trigger('click');
+    }
+  });
+  if (!TOUCH()) return;
   BODY
     .on('mousedown touchstart', function(e) {
       yDown = e.pageY;
@@ -86,11 +100,5 @@ const animationToSwipeDown = () => {
       if (yDown > yUp && window.scrollFlug) $(startTrigger).trigger('click');
     });
   let timeout;
-  BODY.on('mousewheel', function(event) {
-    if (!event.originalEvent.wheelDelta >= 0 && window.scrollFlug) {
-      window.scrollFlug = false;
-      $(startTrigger).trigger('click');
-    }
-  });
 };
 animationToSwipeDown();
